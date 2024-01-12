@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
           steps {
-            echo 'Test is success !!!'
+            echo '"Test is success !!! ${CromePath}"'
           }
         }
 
@@ -24,5 +24,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    CromePath = 'c:Crome\\'
   }
 }
